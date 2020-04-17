@@ -148,7 +148,7 @@ test.serial('should ignore version in pkg.version and use git tag instead', asyn
   t.is(stdout.trim(), '1.2.0');
 });
 
-test.serial('should release all the things (basic)', async t => {
+test.serial.only('should release all the things (basic)', async t => {
   const { bare, target } = t.context;
   const project = path.basename(bare);
   const pkgName = path.basename(target);
